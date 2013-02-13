@@ -1,0 +1,14 @@
+php_flag display_errors On
+php_value error_reporting 30719
+
+# Запрет к конфигурационному файлу
+<Files config.php>
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+# Настройки mod_rewrite
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php [L,QSA]
