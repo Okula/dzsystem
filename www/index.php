@@ -6,7 +6,7 @@
  */
 
 require 'config.php';
-require 'include/config/config_twig.php';
+require ROOT_DIR.'/../src/config/config_twig.php';
 #--------------#
 
 try {
